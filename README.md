@@ -3,18 +3,28 @@ HTTP Witch just for making you HTTP header be magical
 
 # How to use
 
-python ./httpw.py cHIp  < argument >
+python ./httpw.py  <config path>
 
-	  opt. Ex Arg 							Desc
+Configuration format ( write on plaintext ) :
+	
+	<listen port> | <remote host>:<remote port> | <payload>
+	
+Payload format
 
-        I   10.90    					IP Hunting and Fuzzer
-				
-        c   www.host.com    				Capture HTTP Req Received
-				
-        H       						This Help
-			
-        p       						Payload Format List
-
-        
-        Without any option above HTTPW run it main function with argument below
-                <listen port> <remote proxy> <remote port> <path to Config>
+	[host]		remote host
+	
+	[port]		remote port
+	
+	[host_port]	remote host and port
+	
+	[protocol]	HTTP protocol version
+	
+	[crlf]		/r/n
+	
+	[connect]	CONNECT [host_port] [protocol]
+	
+	[cr]		\n
+	
+	[lf]		\r
+	
+	[lrcf]		\n\r
